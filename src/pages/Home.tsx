@@ -59,6 +59,12 @@ const Home = () => {
       <div className="container-fluid custom-main">
         {listPlantDisplayed.map((plante, i) => (
           <li key={i}>
+            <img
+              src={`http://localhost:8080/assets/${plante.url_picture}`}
+              alt="photo"
+              className="card-image-top"
+              style={{ width: "12rem" }}
+            />
             {plante.name} - {plante.category} - 💵 {plante.unitprice_ati}€ - ⭐
             {plante.rating}
           </li>
